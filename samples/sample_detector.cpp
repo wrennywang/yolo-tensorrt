@@ -21,7 +21,7 @@ int main()
 	config_v4.inference_precison = FP32;
 
 	cv::Mat mat_image = cv::imread("../configs/dog.jpg", cv::IMREAD_UNCHANGED);
-	std::unique_ptr<Detector> detector_ = std::make_unique<Detector>();
+	std::unique_ptr<Detector> detector_ = std::unique_ptr<Detector>(new Detector());
 	detector_->init(config_v3);
 	std::vector<Result> res;
 	Timer timer;
