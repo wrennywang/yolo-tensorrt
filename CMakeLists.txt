@@ -23,7 +23,7 @@ if(CUDA_VERSION_MAJOR GREATER 9)
 		set(
 		CUDA_NVCC_FLAGS
 		${CUDA_NVCC_FLAGS}; 
-		-gencode arch=compute_72,code=sm_72
+		-gencode arch=compute_75,code=sm_75
 		)
 endif()
 
